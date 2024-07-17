@@ -1,5 +1,8 @@
 ﻿@model Dictionary<(DateTime Date, int TimeSlot), List<(int DoctorId, string DoctorName)>>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
 @{
     Layout = null;
     var startDate = (DateTime)ViewData["StartDate"];
@@ -145,6 +148,7 @@
                                 @date.ToString("ddd")
                                 <br />
                                 <button class="layui-btn layui-btn-sm layui-btn-fluid">查看詳情</button>
+<<<<<<< HEAD
                                 <div id="morningDetails_@date.ToString("yyyy_MM_dd")" style="display: none;">
                                     @if (Model.ContainsKey(keyMorning) && Model[keyMorning].Count > 0)
                                     {
@@ -184,6 +188,8 @@
                                         <div>No appointments</div>
                                     }
                                 </div>
+=======
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
                             </td>
                         }
                     }
@@ -206,18 +212,29 @@
         </form>
     </div>
 
+<<<<<<< HEAD
     <!-- 弹出窗口 -->
+=======
+    <!-- 彈出視窗 -->
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
     <div id="detailsModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h3 id="dateHeader"></h3>
+<<<<<<< HEAD
             <div id="modalMorningDetails"></div>
             <div id="modalAfternoonDetails"></div>
             <div id="modalNightDetails"></div>
+=======
+            <div id="morningDetails"></div>
+            <div id="afternoonDetails"></div>
+            <div id="nightDetails"></div>
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
         </div>
     </div>
 
     <script>
+<<<<<<< HEAD
         function showDetails(date) {
             var modal = document.getElementById('detailsModal');
             var dateHeader = document.getElementById('dateHeader');
@@ -250,6 +267,54 @@
             modal.style.display = 'none';
         }
     </script>
+=======
+    function showDetails(date) {
+        var modal = document.getElementById('detailsModal');
+        var dateHeader = document.getElementById('dateHeader');
+        var morningDetails = document.getElementById('morningDetails');
+        var afternoonDetails = document.getElementById('afternoonDetails');
+        var nightDetails = document.getElementById('nightDetails');
+
+        dateHeader.innerText = date;
+
+        // Clear previous details
+        morningDetails.innerHTML = '';
+        afternoonDetails.innerHTML = '';
+        nightDetails.innerHTML = '';
+
+        // Populate new details
+        var doctors = @Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model));
+        var selectedDate = new Date(date);
+        var morningKey = selectedDate.toISOString().split('T')[0] + ',1';
+        var afternoonKey = selectedDate.toISOString().split('T')[0] + ',2';
+        var nightKey = selectedDate.toISOString().split('T')[0] + ',3';
+
+        function populateDetails(detailsElement, key, slotName) {
+            if (doctors.hasOwnProperty(key) && doctors[key].length > 0) {
+                detailsElement.innerHTML = `<div class="schedule-slot ${slotName.toLowerCase()}"><h4>${slotName}</h4>`;
+                doctors[key].forEach(function (doctor) {
+                    detailsElement.innerHTML += `<div>${doctor.DoctorName}</div>`;
+                });
+                detailsElement.innerHTML += `</div>`;
+            } else {
+                detailsElement.innerHTML = `<div class="schedule-slot ${slotName.toLowerCase()}"><h4>${slotName}</h4><div>No appointments</div></div>`;
+            }
+        }
+
+        // Display schedules
+        populateDetails(morningDetails, morningKey, 'Morning'); 
+        populateDetails(afternoonDetails, afternoonKey, 'Afternoon');
+        populateDetails(nightDetails, nightKey, 'Night'); 
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        var modal = document.getElementById('detailsModal');
+        modal.style.display = 'none';
+    }
+</script>
+
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
 
 </body>
 </html>

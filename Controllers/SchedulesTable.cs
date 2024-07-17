@@ -16,6 +16,7 @@ namespace _0611_2.Controllers
 
         public async Task<IActionResult> Index(DateTime? startDate)
         {
+<<<<<<< HEAD
             DateTime monthStart = startDate ?? DateTime.Today;
             ViewData["StartDate"] = monthStart;
 
@@ -50,6 +51,28 @@ namespace _0611_2.Controllers
             }
 
             return schedules;
+=======
+            DateTime startOfWeek = startDate ?? DateTime.Today.AddDays(-(int)DateTime.Today.DayOfWeek + (int)DayOfWeek.Monday);
+            ViewData["StartDate"] = startOfWeek;
+
+            var doctorSchedules = await _context.Schedule
+                .Include(ds => ds.Doctor)
+                .Where(ds => ds.Date >= startOfWeek && ds.Date < startOfWeek.AddDays(7))
+                .ToListAsync();
+
+            var model = new Dictionary<(DateTime Date, int TimeSlot), List<(int DoctorId, string DoctorName)>>();
+            foreach (var schedule in doctorSchedules)
+            {
+                var key = (schedule.Date.Date, schedule.TimeSlot);
+                if (!model.ContainsKey(key))
+                {
+                    model[key] = new List<(int DoctorId, string DoctorName)>();
+                }
+                model[key].Add((schedule.DoctorId.Value, schedule.Doctor.DoctorName));
+            }
+
+            return View(model);
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
         }
 
         public async Task<IActionResult> Appointment(int doctorId, DateTime date, int timeSlot)
@@ -71,17 +94,31 @@ namespace _0611_2.Controllers
         [HttpPost]
         public async Task<IActionResult> MakeAppointment(int doctorId, DateTime date, int timeSlot, int customerId)
         {
+<<<<<<< HEAD
+=======
+            // 查找现有的预约项
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
             var schedule = await _context.Schedule
                 .FirstOrDefaultAsync(s => s.DoctorId == doctorId && s.Date == date && s.TimeSlot == timeSlot);
 
             if (schedule != null)
             {
+<<<<<<< HEAD
                 schedule.CustomerId = customerId;
+=======
+                // 更新现有的预约项
+                schedule.CustomerId = customerId;
+
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
                 _context.Schedule.Update(schedule);
                 await _context.SaveChangesAsync();
             }
             else
             {
+<<<<<<< HEAD
+=======
+                // 如果找不到现有的预约项，可以选择抛出异常或处理错误
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
                 return NotFound("预约项未找到");
             }
 

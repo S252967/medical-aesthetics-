@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\a0968\\Downloads\\0611-2\\0611-2.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\a0968\\Downloads\\0611-2\\0611-2.csproj",
         "packagesPath": "C:\\Users\\a0968\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\a0968\\Downloads\\0611-2\\obj\\",
+=======
+    "C:\\Users\\a0968\\Downloads\\0709-峯\\0611-2.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\a0968\\Downloads\\0709-峯\\0611-2.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\a0968\\Downloads\\0709-峯\\0611-2.csproj",
+        "projectName": "0611-2",
+        "projectPath": "C:\\Users\\a0968\\Downloads\\0709-峯\\0611-2.csproj",
+        "packagesPath": "C:\\Users\\a0968\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\a0968\\Downloads\\0709-峯\\obj\\",
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
