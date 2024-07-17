@@ -757,3 +757,4 @@ C:\Users\a0968\Downloads\0611-2\obj\Debug\net7.0\refint\0611-2.dll
 C:\Users\a0968\Downloads\0611-2\obj\Debug\net7.0\0611-2.pdb
 C:\Users\a0968\Downloads\0611-2\obj\Debug\net7.0\0611-2.genruntimeconfig.cache
 C:\Users\a0968\Downloads\0611-2\obj\Debug\net7.0\ref\0611-2.dll
+C:\Users\a0968\Downloads\0611-2\obj\Debug\net7.0\0611-2.sourcelink.json
