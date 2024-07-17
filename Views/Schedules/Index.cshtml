@@ -1,0 +1,54 @@
+﻿@model IEnumerable<_0611_2.Models.Schedule>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">新增</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TimeSlot)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Customer.CustomerName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doctor.DoctorName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TimeSlot)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Customer.CustomerName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Doctor.DoctorName)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.ScheduleId">编辑</a> |
+                    <a asp-action="Details" asp-route-id="@item.ScheduleId">详情</a> |
+                    <a asp-action="Delete" asp-route-id="@item.ScheduleId">删除</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

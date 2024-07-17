@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JAY\\Desktop\\0611-2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E126835B-B327-4FF4-9799-7EDCA0EAC7A0}|0611-2.csproj|c:\\users\\jay\\desktop\\0611-2\\controllers\\doctorcontrollercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E126835B-B327-4FF4-9799-7EDCA0EAC7A0}|0611-2.csproj|solutionrelative:controllers\\doctorcontrollercs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E126835B-B327-4FF4-9799-7EDCA0EAC7A0}|0611-2.csproj|c:\\users\\jay\\desktop\\0611-2\\controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E126835B-B327-4FF4-9799-7EDCA0EAC7A0}|0611-2.csproj|solutionrelative:controllers\\customercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E126835B-B327-4FF4-9799-7EDCA0EAC7A0}|0611-2.csproj|c:\\users\\jay\\desktop\\0611-2\\controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E126835B-B327-4FF4-9799-7EDCA0EAC7A0}|0611-2.csproj|solutionrelative:controllers\\schedulescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 267,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SchedulesController.cs",
+              "DocumentMoniker": "C:\\Users\\JAY\\Desktop\\0611-2\\Controllers\\SchedulesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SchedulesController.cs",
+              "ToolTip": "C:\\Users\\JAY\\Desktop\\0611-2\\Controllers\\SchedulesController.cs",
+              "RelativeToolTip": "Controllers\\SchedulesController.cs",
+              "ViewState": "AQIAAFYAAAAAAAAAAAAswGAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:15:27.619Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DoctorControllercs.cs",
+              "DocumentMoniker": "C:\\Users\\JAY\\Desktop\\0611-2\\Controllers\\DoctorControllercs.cs",
+              "RelativeDocumentMoniker": "Controllers\\DoctorControllercs.cs",
+              "ToolTip": "C:\\Users\\JAY\\Desktop\\0611-2\\Controllers\\DoctorControllercs.cs",
+              "RelativeToolTip": "Controllers\\DoctorControllercs.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAAE4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:03:29.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CustomerController.cs",
+              "DocumentMoniker": "C:\\Users\\JAY\\Desktop\\0611-2\\Controllers\\CustomerController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CustomerController.cs",
+              "ToolTip": "C:\\Users\\JAY\\Desktop\\0611-2\\Controllers\\CustomerController.cs",
+              "RelativeToolTip": "Controllers\\CustomerController.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAA+wE4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T15:03:28.149Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
