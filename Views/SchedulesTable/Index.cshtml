@@ -1,4 +1,8 @@
 ﻿@model Dictionary<(DateTime Date, int TimeSlot), List<(int DoctorId, string DoctorName)>>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
 @{
     Layout = null;
     var startDate = (DateTime)ViewData["StartDate"];
@@ -144,6 +148,48 @@
                                 @date.ToString("ddd")
                                 <br />
                                 <button class="layui-btn layui-btn-sm layui-btn-fluid">查看詳情</button>
+<<<<<<< HEAD
+                                <div id="morningDetails_@date.ToString("yyyy_MM_dd")" style="display: none;">
+                                    @if (Model.ContainsKey(keyMorning) && Model[keyMorning].Count > 0)
+                                    {
+                                        @foreach (var doctor in Model[keyMorning])
+                                        {
+                                            <div>@doctor.DoctorName</div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <div>No appointments</div>
+                                    }
+                                </div>
+                                <div id="afternoonDetails_@date.ToString("yyyy_MM_dd")" style="display: none;">
+                                    @if (Model.ContainsKey(keyAfternoon) && Model[keyAfternoon].Count > 0)
+                                    {
+                                        @foreach (var doctor in Model[keyAfternoon])
+                                        {
+                                            <div>@doctor.DoctorName</div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <div>No appointments</div>
+                                    }
+                                </div>
+                                <div id="nightDetails_@date.ToString("yyyy_MM_dd")" style="display: none;">
+                                    @if (Model.ContainsKey(keyNight) && Model[keyNight].Count > 0)
+                                    {
+                                        @foreach (var doctor in Model[keyNight])
+                                        {
+                                            <div>@doctor.DoctorName</div>
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <div>No appointments</div>
+                                    }
+                                </div>
+=======
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
                             </td>
                         }
                     }
@@ -166,18 +212,62 @@
         </form>
     </div>
 
+<<<<<<< HEAD
+    <!-- 弹出窗口 -->
+=======
     <!-- 彈出視窗 -->
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
     <div id="detailsModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <h3 id="dateHeader"></h3>
+<<<<<<< HEAD
+            <div id="modalMorningDetails"></div>
+            <div id="modalAfternoonDetails"></div>
+            <div id="modalNightDetails"></div>
+=======
             <div id="morningDetails"></div>
             <div id="afternoonDetails"></div>
             <div id="nightDetails"></div>
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
         </div>
     </div>
 
     <script>
+<<<<<<< HEAD
+        function showDetails(date) {
+            var modal = document.getElementById('detailsModal');
+            var dateHeader = document.getElementById('dateHeader');
+            var modalMorningDetails = document.getElementById('modalMorningDetails');
+            var modalAfternoonDetails = document.getElementById('modalAfternoonDetails');
+            var modalNightDetails = document.getElementById('modalNightDetails');
+
+            dateHeader.innerText = date;
+
+            // 清除之前的详细信息
+            modalMorningDetails.innerHTML = '';
+            modalAfternoonDetails.innerHTML = '';
+            modalNightDetails.innerHTML = '';
+
+            // 显示对应的详细信息
+            var morningDetails = document.getElementById('morningDetails_' + date.replace(/-/g, '_')).innerHTML;
+            var afternoonDetails = document.getElementById('afternoonDetails_' + date.replace(/-/g, '_')).innerHTML;
+            var nightDetails = document.getElementById('nightDetails_' + date.replace(/-/g, '_')).innerHTML;
+
+            modalMorningDetails.innerHTML = '<h4>Morning</h4>' + morningDetails;
+            modalAfternoonDetails.innerHTML = '<h4>Afternoon</h4>' + afternoonDetails;
+            modalNightDetails.innerHTML = '<h4>Night</h4>' + nightDetails;
+
+            // 显示弹出窗口
+            modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('detailsModal');
+            modal.style.display = 'none';
+        }
+    </script>
+=======
     function showDetails(date) {
         var modal = document.getElementById('detailsModal');
         var dateHeader = document.getElementById('dateHeader');
@@ -224,6 +314,7 @@
     }
 </script>
 
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
 
 </body>
 </html>

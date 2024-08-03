@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+﻿using _0611_2.Models;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
+=======
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,11 +11,36 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using _0611_2.Data;
 using _0611_2.Models;
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
 
 namespace _0611_2.Controllers
 {
     public class HomeController : Controller
     {
+<<<<<<< HEAD
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger)
+        {
+            _logger = logger;
+        }
+
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+=======
         private readonly _0611_2Context _context;
 
         public HomeController(_0611_2Context context)
@@ -50,6 +80,7 @@ namespace _0611_2.Controllers
             ViewData["StartDate"] = startDate;
 
             return View(scheduleDict);
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
         }
     }
 }

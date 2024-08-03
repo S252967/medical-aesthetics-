@@ -757,6 +757,9 @@ C:\Users\a0968\Downloads\0611-2\obj\Debug\net7.0\refint\0611-2.dll
 C:\Users\a0968\Downloads\0611-2\obj\Debug\net7.0\0611-2.pdb
 C:\Users\a0968\Downloads\0611-2\obj\Debug\net7.0\0611-2.genruntimeconfig.cache
 C:\Users\a0968\Downloads\0611-2\obj\Debug\net7.0\ref\0611-2.dll
+<<<<<<< HEAD
+C:\Users\a0968\Downloads\0611-2\obj\Debug\net7.0\0611-2.sourcelink.json
+=======
 C:\Users\a0968\Downloads\0709-峯\bin\Debug\net7.0\appsettings.Development.json
 C:\Users\a0968\Downloads\0709-峯\bin\Debug\net7.0\appsettings.json
 C:\Users\a0968\Downloads\0709-峯\bin\Debug\net7.0\0611-2.staticwebassets.runtime.json
@@ -1010,3 +1013,4 @@ C:\Users\a0968\Downloads\0709-峯\obj\Debug\net7.0\refint\0611-2.dll
 C:\Users\a0968\Downloads\0709-峯\obj\Debug\net7.0\0611-2.pdb
 C:\Users\a0968\Downloads\0709-峯\obj\Debug\net7.0\0611-2.genruntimeconfig.cache
 C:\Users\a0968\Downloads\0709-峯\obj\Debug\net7.0\ref\0611-2.dll
+>>>>>>> 06a83381d66912a0c9f65193a3096182526fcd0e
