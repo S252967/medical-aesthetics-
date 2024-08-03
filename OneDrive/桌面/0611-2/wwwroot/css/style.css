@@ -1,0 +1,39 @@
+body{
+    background-color: rgb(128, 208, 240);
+
+}
+
+
+.container{
+    width: 700px;
+    height: 600px;
+    /*置中*/
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid gray;
+    box-shadow: 5px 10px 7px gray;
+    padding: 20px;
+    background-color: white;
+}
+
+
+.fc .fc-toolbar-title{
+    color: brown;
+    font-size: 30px;
+}
+.fc th{
+    color: blue;
+    font-size: 25px;
+}
+@media(max-width:600px){
+    .container{
+        width: 370px;
+        height: 600px;
+    }
+    .fc th{
+        color: blue;
+        font-size: 25px;
+    }
+}

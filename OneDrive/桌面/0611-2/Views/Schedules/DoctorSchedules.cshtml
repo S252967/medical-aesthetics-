@@ -1,0 +1,28 @@
+﻿@model IEnumerable<_0611_2.Models.Schedule>
+
+@{
+    ViewData["Title"] = "Doctor Schedules";
+    var doctor = (Doctor)ViewData["Doctor"];
+}
+
+<h2>@doctor.DoctorName 的排班</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>TimeSlot</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var schedule in Model)
+        {
+            <tr>
+                <td>@schedule.Date.ToString("yyyy-MM-dd")</td>
+                <td>@(Enum.GetName(typeof(TimeSlot), schedule.TimeSlot))</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Index">Back to List</a>
